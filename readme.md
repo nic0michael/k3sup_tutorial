@@ -92,7 +92,7 @@ kubectl config set-context --current --namespace=nico-clust
 kubectl config view --minify | grep namespace:
 journalctl -u k3s.service
 ```
-==========================================================================
+============================================================================================================
 
 # B) ADDING THE SECOND SERVER
 ## 1. Setup passwordless ssh loggin for root user
@@ -133,7 +133,7 @@ ssh-keygen -t rsa -b 4096
 ssh root@10.154.2.98
 exit
 ```
-#### COPY THE PUBLIC KEY TO THE FIRST SERVER
+#### COPY THE PUBLIC KEY TO THE SECOND SERVER
 ```
 scp ~/.ssh/id_rsa.pub root@10.154.2.98:~
 ssh root@10.154.2.98
@@ -144,7 +144,7 @@ ssh root@10.154.2.98
 exit
 ```
 
-## 2. create InstallFirstServer.sh shell script
+## 2. create 2_InstallSecondServer shell script
 ```
 sudo su -
 mkdir scripts
@@ -153,11 +153,11 @@ nano ~/scripts/2_InstallSecondServer.sh
 chmod 775 ~/scripts/2_InstallSecondServer.sh
 ```
 
-## 3. run InstallFirstServer.sh shell script
+## 3. run 2_InstallSecondServer shell script
 
 ./2_InstallSecondServer.sh
 
-## 4. Output from InstallFirstServer.sh shell script
+## 4. Output from 2_InstallSecondServer shell script
 ```
 [INFO]  Creating killall script /usr/local/bin/k3s-killall.sh
 [INFO]  Creating uninstall script /usr/local/bin/k3s-agent-uninstall.sh
@@ -167,7 +167,7 @@ chmod 775 ~/scripts/2_InstallSecondServer.sh
 [INFO]  systemd: Starting k3s-agent
 ```
 
-========================================================================
+============================================================================================================
 
 
 
@@ -209,7 +209,7 @@ ssh-keygen -t rsa -b 4096
 ssh root@10.154.2.88
 exit
 ```
-#### COPY THE PUBLIC KEY TO THE FIRST SERVER
+#### COPY THE PUBLIC KEY TO THE THIRD SERVER
 ```
 scp ~/.ssh/id_rsa.pub root@10.154.2.88:~
 ssh root@10.154.2.88
@@ -232,8 +232,6 @@ chmod 775 ~/scripts/3_InstallThirdServer.sh
 ```
 
 ## 4. Output from 3_InstallThirdServer.shshell script
-
-
 ```
 `+ export NODE_1=10.154.2.93
 + NODE_1=10.154.2.93
