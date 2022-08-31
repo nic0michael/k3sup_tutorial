@@ -1,10 +1,13 @@
 # K3SUP Tutorial
+K3SUP is pronounced Ketchup by the developer Alex Ellis
+
+https://github.com/alexellis/k3sup
 
 # A) INSTALLING TO THE FIRST SERVER
 ## 1. Setup passwordless ssh loggin for root user
 
 ```
-sh nickm@10.154.2.93
+ssh nickm@10.154.2.93
 sudo su -
 ```
 
