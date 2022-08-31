@@ -3,7 +3,7 @@ K3SUP is pronounced Ketchup by the developer Alex Ellis
 
 https://github.com/alexellis/k3sup
 
-# Download and install k3sup on local machine
+# Download and install k3sup on local machine first
 ```
 curl -sLS https://get.k3sup.dev | sh
 sudo cp k3sup /usr/local/bin/k3sup
