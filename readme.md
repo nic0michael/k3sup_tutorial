@@ -95,7 +95,7 @@ kubectl config set-context --current --namespace=nico-clust
 kubectl config view --minify | grep namespace:
 journalctl -u k3s.service
 ```
-============================================================================================================
+======================================================================================================
 
 # B) ADDING THE SECOND SERVER
 ## 1. Setup passwordless ssh loggin for root user
@@ -170,7 +170,7 @@ chmod 775 ~/scripts/2_InstallSecondServer.sh
 [INFO]  systemd: Starting k3s-agent
 ```
 
-============================================================================================================
+======================================================================================================
 
 
 
